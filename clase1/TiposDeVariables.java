@@ -1,4 +1,6 @@
-public class Clase1 {
+package clase1;
+
+public class TiposDeVariables {
 
     public static void main(String[] args) {
 
