@@ -27,5 +27,6 @@ public class If {
         String resultado = edad >=18  ? adulto : menor ;
         System.out.println(resultado);
 
+        teclado.close();
     }
 }

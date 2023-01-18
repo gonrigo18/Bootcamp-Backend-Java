@@ -7,16 +7,16 @@ public class TiposDeVariables {
         // Tipos primitivos
 
         // Enteros sin decimales:
-        byte b;
-        short s;
-        int i;
-        long l;
+        byte b; // -128 a 127
+        short s; // -32768 a 32767
+        int i; // -2147483648 a 2147483647
+        long l; // -9223372036854775808 a
 
         // byte < short < int < long..
 
         // Enteros con decimales:
-        float f;
-        double d;
+        float f = 0.0F;
+        double d = 0.0;
 
         // Cadenas
         char c = 'c';
