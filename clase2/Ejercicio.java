@@ -16,6 +16,7 @@ public class Ejercicio {
         int mayor;
         mayor = Mayor(num1,num2,num3);
         System.out.println("El numero mas grande es: " + mayor);
+        teclado.close();
     }
 
     public static int Mayor(int a, int b, int c){
