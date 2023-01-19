@@ -12,16 +12,17 @@ public class Integrador {
 
     public static void main(String[] args) {
 
+        int acumular = 0;
+        int contador = 0;
+        int promedio = 0;
+        int total = 0;
+
         System.out.println("Ingresa una opcion: ");
         System.out.println("1 - acumular");
         System.out.println("2 - contar");
         System.out.println("3 - promedio");
         Scanner keyboard = new Scanner(System.in);
         int option = keyboard.nextInt();
-        int acumular = 0;
-        int contador = 0;
-        int promedio = 0;
-        int total = 0;
 
         do {
             if (option == 1) {
