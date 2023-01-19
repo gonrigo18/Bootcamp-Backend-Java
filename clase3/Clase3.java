@@ -29,6 +29,8 @@ public class Clase3 {
         int contador = 0;
         int minimo=0;
         int maximo=0;
+        int minimos=0;
+        int maximos=0;
         float promedio;
         int pMinimo=0;
         int pMaximo=0;
@@ -47,10 +49,12 @@ public class Clase3 {
                 if(numeros[i] > maximo){
                     maximo = numeros[i];
                     pMaximo = i;
+                    maximos+=maximo;
                 }
                 if (numeros[i] < minimo){
                     minimo = numeros[i];
                     pMinimo = i;
+                    minimos+=minimo;
                 }
             }
             contador++;
