@@ -16,15 +16,16 @@ public class Integrador {
         int contador = 0;
         int promedio = 0;
         int total = 0;
+        int continuar = 0;
 
-        System.out.println("Ingresa una opcion: ");
-        System.out.println("1 - acumular");
-        System.out.println("2 - contar");
-        System.out.println("3 - promedio");
         Scanner keyboard = new Scanner(System.in);
-        int option = keyboard.nextInt();
 
         do {
+            System.out.println("Ingresa una opcion: ");
+            System.out.println("1 - acumular");
+            System.out.println("2 - contar");
+            System.out.println("3 - promedio");
+            int option = keyboard.nextInt();
             if (option == 1) {
                 System.out.println("Ingresa un valor acumular");
                 int valor = keyboard.nextInt();
@@ -39,12 +40,9 @@ public class Integrador {
                 promedio = (valor1 + valor2 + valor3) / 3;
                 total = (valor1 + valor2 + valor3);
             }
-            System.out.println("Ingresa una opcion: ");
-            System.out.println("1 - acumular");
-            System.out.println("2 - contar");
-            System.out.println("3 - promedio");
-            option = keyboard.nextInt();
-        } while (option > 0 && option < 4);
+            System.out.println("Desea continuar?: (1 - SI | 2 - NO)");
+            continuar = keyboard.nextInt();
+        } while (continuar == 1);
         System.out.println("Acumulado: " + acumular);
         System.out.println("Contador: " + contador);
         System.out.println("Total: " + total + " " + "Promedio: " + promedio);
