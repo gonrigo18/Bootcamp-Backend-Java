@@ -26,19 +26,26 @@ public class Integrador {
             System.out.println("2 - contar");
             System.out.println("3 - promedio");
             int option = keyboard.nextInt();
-            if (option == 1) {
-                System.out.println("Ingresa un valor acumular");
-                int valor = keyboard.nextInt();
-                acumular += valor;
-            } else if (option == 2) {
-                contador++;
-            } else {
-                System.out.println("Ingrese 3 numeros para calcular promedio: ");
-                int valor1 = keyboard.nextInt();
-                int valor2 = keyboard.nextInt();
-                int valor3 = keyboard.nextInt();
-                promedio = (valor1 + valor2 + valor3) / 3;
-                total = (valor1 + valor2 + valor3);
+            switch (option) {
+                case 1:
+                    System.out.println("Ingresa un valor acumular");
+                    int valor = keyboard.nextInt();
+                    acumular += valor;
+                    break;
+                case 2:
+                    contador++;
+                    break;
+                case 3:
+                    System.out.println("Ingrese 3 numeros para calcular promedio: ");
+                    int valor1 = keyboard.nextInt();
+                    int valor2 = keyboard.nextInt();
+                    int valor3 = keyboard.nextInt();
+                    promedio = (valor1 + valor2 + valor3) / 3;
+                    total = (valor1 + valor2 + valor3);
+                    break;
+                default:
+                    System.out.println("La opcion no es valida");
+                    break;
             }
             System.out.println("Desea continuar?: (1 - SI | 2 - NO)");
             continuar = keyboard.nextInt();
