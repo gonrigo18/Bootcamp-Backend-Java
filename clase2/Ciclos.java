@@ -10,18 +10,18 @@ public class Ciclos {
 
     public static void main(String[] args) {
 
-        int pares=0;
-        int impares=0;
+        int pares = 0;
+        int impares = 0;
 
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese un numero: ");
         int n = teclado.nextInt();
 
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             boolean esPar = i % 2 == 0;
-            if (esPar){
+            if (esPar) {
                 pares += i;
-            }else {
+            } else {
                 impares += i;
             }
         }
