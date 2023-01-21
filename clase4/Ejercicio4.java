@@ -3,7 +3,7 @@ package clase4;
 public class Ejercicio4 {
     public static void main(String[] args) {
 
-        /*Dado el vector {    10,20,5,15,30,20}
+        /*Dado el vector { 10,20,5,15,30,20}
         1 - informar el vector de la forma indice: X valor: Y,
         2 - totalizar el vector e informar el total,
         3 - informar el contenido de las posiciones impares
@@ -18,6 +18,9 @@ public class Ejercicio4 {
         for(int i = 0; i < vector.length; i++){
             System.out.println("Indice: " + i + " -> Valor: " + vector[i]);
             total = total + vector[i];
+            if (i % 2 != 0){
+                System.out.println("Posicion impar: " + i + " con valor: " + vector[i]);
+            }
             if (vector[i] > mayor){
                 mayor = vector[i];
             }
