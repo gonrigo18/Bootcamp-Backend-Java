@@ -92,6 +92,8 @@ public class Ejercicio1 {
         }
         System.out.println(mayor);
         System.out.println(menor);
+        numero.close();
     }
+
 
 }
