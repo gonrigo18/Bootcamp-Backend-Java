@@ -1,6 +1,6 @@
 package clase4;
 
-public class Ejercicio4 {
+public class    Ejercicio4 {
     public static void main(String[] args) {
 
         /*Dado el vector { 10,20,5,15,30,20}
