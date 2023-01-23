@@ -8,7 +8,7 @@ public class Ejercicio5 {
         int[] valores = {10, 15, 95, 100, 25};
         int aux;
         int max = valores.length / 2;
-        for (int i = valores.length-1; i >= max; i--) {
+        for (int i = valores.length-1; i >=max; i--) {
             aux = valores[i];
             valores[i] = valores[valores.length-(i+1)];
             valores[valores.length - (i + 1)] = aux;
