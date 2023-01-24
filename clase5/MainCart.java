@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainCart {
     public static void main(String[] args) {
-        int[] cart = new int[0];
+        Object[][] cart = new Object[0][1];
 
         Scanner keyboard = new Scanner(System.in);
 
@@ -13,7 +13,8 @@ public class MainCart {
         do {
             System.out.println("Ingrese el ID del articulo");
             int articleId = keyboard.nextInt();
-            cart = Cart.add(cart, articleId);
+            String name = keyboard.next();
+            cart = Cart.add(cart, articleId,name);
             Cart.showCart(cart);
 
             continuar = continuar(keyboard);

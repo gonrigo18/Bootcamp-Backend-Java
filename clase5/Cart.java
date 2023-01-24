@@ -2,19 +2,22 @@ package clase5;
 
 public class Cart {
 
-    public static int[] add(int[] cart, int newId) {
+    public static Object[] add(Object[][] cart, int newId, String name) {
 
-        int[] newCart = new int[cart.length + 1];
+        Object[][] newCart = new Object[cart.length + 1][1];
         for (int i = 0; i < cart.length; i++) {
-            newCart[i] = cart[i];
+            newCart[i][0] = cart[i][0];
+            newCart[i][1] = cart[i][1];
         }
-        newCart[newCart.length - 1] = newId;
+        newCart[newCart.length - 1][0] = newId;
+        newCart[newCart.length - 1][1] = name;
+
 
         return newCart;
     }
 
-    static void showCart(int[] cart) {
-        for (int article : cart) {
+    static void showCart(Object[][] cart) {
+        for (Object[] article : cart) {
             System.out.println("id: " + article);
         }
     }
