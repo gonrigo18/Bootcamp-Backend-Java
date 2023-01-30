@@ -253,6 +253,35 @@ from articulos;
 select *, 3 as cant_cuotas, round(((1/3*precio)*1.05)) as valor_cuota, round((((1/3*precio)*1.05))*3) as total_a_pagar
 from articulos;
 
+create table socios (
+id int primary key auto_increment unique);
+
+create table orden (
+id int primary key auto_increment unique,
+precio float not null,
+fecha_creacion date not null,
+socios_id int not null
+);
+
+alter table orden add constraint fk_orden_socios foreign key (socios_id) references socios(id);
+
+insert into orden (precio,fecha_creacion,socios_id) values (800,curdate(),1);
+
+# JOIN
+
+select *
+from orden o
+join socios s
+on o.socios_id = s.id;
+
+select o.id, o.precio, o.fecha_creacion,
+s.nombre, s.apellido
+from orden o
+join socios s
+on o.socios_id = s.id;
+
+
+
 
 
 
