@@ -84,13 +84,15 @@ discount_rate float);
 
 create table payment_methods (
 id int primary key auto_increment unique not null,
-name_ varchar (50) not null,
+payment_description varchar (100) not null,
+short_description varchar (15) not null,
+payment_code varchar (5) not null,
 enabled int not null
 );
 
 create table countries (
 id int primary key auto_increment unique not null,
-name_ varchar (50) not null,
+countrie_description varchar (50) not null,
 short_description varchar (150) not null
 );
 
@@ -112,6 +114,27 @@ describe articles;
 
 alter table articles add constraint fk_articles_brands foreign key (brands_id) references brands(id);
 alter table articles add constraint fk_articles_brands foreign key(brands_id) references brands(id);
+
+# Constrain de tabla ordenes
+alter table orders add constraint fk_orders_orders_states foreign key (orders_states_id) references orders_states(id);
+alter table orders add constraint fk_orders_partners foreign key (partners_id) references partners(id);
+alter table orders add constraint fk_orders_coupons foreign key (coupons_id) references coupons(id);
+
+
+alter table orders_articles add constraint fk_orders_articles_orders foreign key (orders_id) references orders(id);
+alter table orders_articles add constraint fk_orders_articles_articles foreign key (articles_id) references articles(id); 
+
+alter table payments_orders add constraint fk_payments_orders_orders foreign key (orders_id) references orders(id);
+alter table payments_orders add constraint fk_payments_orders_payments_methods foreign key (payment_methods_id) references payment_methods(id);
+
+alter table orders_addresses add constraint fk_orders_addresses_orders foreign key (orders_id) references orders(id);
+alter table orders_addresses add constraint fk_orders_addresses_countries foreign key (countries_id) references countries(id);
+
+
+
+
+
+
 
 
 
