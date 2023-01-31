@@ -250,7 +250,9 @@ from articulos;
 # Listar todos los articulos incluyendo una columna denominada  "cantidad de cuotas"
 # y otra "valor de cuota", la cantidad es fija  y es 3, el valor de cuota corresponde a 1/3 del monto con un 5% de interes
 
-select *, 3 as cant_cuotas, round(((1/3*precio)*1.05)) as valor_cuota, round((((1/3*precio)*1.05))*3) as total_a_pagar
+select *, 3 as cant_cuotas, 
+round(((1/3*precio)*1.05)) as valor_cuota, 
+round((((1/3*precio)*1.05))*3) as total_a_pagar
 from articulos;
 
 create table socios (
