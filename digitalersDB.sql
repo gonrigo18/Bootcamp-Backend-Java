@@ -317,6 +317,14 @@ on C.id = A.categorias_id
 group by a.categorias_id
 having count(categorias_id) > 2;
 
+# Sumar precios
+select sum(precio) as precio_total, c.descripcion as categoria
+from articulos A
+inner join categorias C
+on C.id = A.categorias_id
+group by a.categorias_id;
+
+
 
 
 
