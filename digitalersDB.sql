@@ -281,6 +281,41 @@ join socios s
 on o.socios_id = s.id;
 
 
+#  Count + order by
+
+select * from articulos;
+select * from clients;
+select * from socios;
+
+select count(*) from articulos
+where articulo_id = 1;
+
+update articulos
+set stock = 15
+where articulo_id > 3 and articulo_id < 8;
+
+# Podemos usar check 
+alter table articulos add constraint precio_mayor_0 check (precio>0);
+
+#max
+select max(articulo_id) from articulos;
+
+#min
+select min(articulo_id) from articulos;
+
+
+select (categorias_id) from articulos A
+inner join categorias C
+on C.id = A.categorias_id
+group by a.categorias_id;
+
+# having 
+select count(categorias_id) as cantidad, c.descripcion as categoria
+from articulos A
+inner join categorias C
+on C.id = A.categorias_id
+group by a.categorias_id
+having count(categorias_id) > 2;
 
 
 
